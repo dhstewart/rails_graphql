@@ -4,4 +4,17 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+5.times do |i|
+  archs = ["cleric", "fighter", "wizard", "bard", "rogue", "druid"]
+  names = ["jane", "bob", "alex", "cassandra", "raul", "nancy"]
+
+  name = names.sample
+  arch = archs.sample
+
+  Character.create(
+    name: name,
+    hp: rand(100),
+    archetype: arch
+  )
+end
