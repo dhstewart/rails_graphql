@@ -22,26 +22,33 @@ gem 'puma', '~> 4.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making
+# cross-origin AJAX possible
 gem 'rack-cors'
 
 gem 'graphql'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger
+  # console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
   gem 'pry'
+  gem 'rspec-graphql_matchers'
+  gem 'rspec-rails'
 end
 
 group :development do
+  gem 'graphiql-rails'
+  gem 'guard'
+  gem 'guard-rspec', require: false
   gem 'listen', '~> 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Ensure pry/guard work correctly with ruby
+  # https://github.com/guard/guard/wiki/Add-Readline-support-to-Ruby-on-Mac-OS-X
+  gem 'rb-readline'
+  # Spring speeds up development by keeping your application running in the
+  # background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'rspec-rails'
-  gem 'pry'
-  gem 'graphiql-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
