@@ -46,6 +46,7 @@ group :development do
   # Ensure pry/guard work correctly with ruby
   # https://github.com/guard/guard/wiki/Add-Readline-support-to-Ruby-on-Mac-OS-X
   gem 'rb-readline'
+  gem 'rubocop', require: false
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
