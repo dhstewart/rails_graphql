@@ -1,15 +1,17 @@
 require:
   - rubocop-performance
   - rubocop-rails
-  - rubocop-rspec
+  # - rubocop-rspec
 
 AllCops:
+  NewCops: enable
   Exclude:
     - 'db/**/*'
     - 'script/**/*'
     - 'bin/**/*'
+    - 'tmp/**/*'
 
-Metrics/LineLength:
+Layout:
   Max: 80
 
 Metrics/BlockLength:
