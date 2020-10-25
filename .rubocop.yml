@@ -10,6 +10,9 @@ AllCops:
     - 'script/**/*'
     - 'bin/**/*'
     - 'tmp/**/*'
+    - 'Guardfile'
+    - 'app/controllers/graphql_controller.rb'
+    - 'config/environments/development.rb'
 
 Layout:
   Max: 80
