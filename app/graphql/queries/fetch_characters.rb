@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 module Queries
   class FetchCharacters < Queries::BaseQuery
-
     type [Types::CharacterType], null: false
 
     def resolve
