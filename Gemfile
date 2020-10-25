@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
@@ -36,6 +36,10 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-graphql_matchers'
   gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
 end
 
 group :development do
@@ -46,7 +50,6 @@ group :development do
   # Ensure pry/guard work correctly with ruby
   # https://github.com/guard/guard/wiki/Add-Readline-support-to-Ruby-on-Mac-OS-X
   gem 'rb-readline'
-  gem 'rubocop', require: false
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
